@@ -1,0 +1,129 @@
+
+    .content {
+      color:#202842;
+      display: flex;
+      flex-direction: column;
+      .inputContent {
+        padding: 5px 20px;
+        p {
+          font-size: 12px;
+          font-weight: 500;
+        }
+      }
+
+      .control {
+        position: relative;
+        padding-left: 35px;
+        margin-top: 0px;
+        display: flex;
+        flex-wrap: wrap;
+        cursor: pointer;
+          .colorRed {
+            color: #e94155;
+            // text-transform: lowercase;
+          }
+          input {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+          }
+          .control__indicator {
+            position: absolute;
+            top: 8px;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            background: #eee;
+            border-radius: 3px;
+            &:after {
+              content: '';
+              position: absolute;
+              // display: none;
+              left: 9px;
+              top: 4px;
+              width: 5px;
+              height: 10px;
+              border: solid #666;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+          }
+          &:hover input ~ .control__indicator,
+          input:focus ~ .control__indicator {
+            background: #ddd;
+          }
+          input:checked ~ .control__indicator {
+            background: #1dd1a1;
+            &:after {
+              border-color: #fff;
+            }
+          }
+          &:hover input:not([disabled]):checked ~ .control__indicator,
+          input:checked:focus ~ .control__indicator {
+            background: #1dd1a1;
+          }
+          input:checked ~ .control__indicator:after {
+            display: block;
+          }
+      }
+      .lists {
+        padding: 0px; 
+        margin-top: 15px;
+        .list {
+          display: flex; 
+          color: rgb(34, 34, 34); 
+          align-items: center; 
+          margin-bottom: 5px;
+          .svg {
+            color: #1dd1a1; 
+            margin-right: 10px; 
+            font-size: 16px;
+          }
+        }
+      }
+      form{
+        .row {
+          display: flex;
+          &>div{
+            width:100%;
+            margin-right:12px;
+            &:last-child{
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .boxHeader {
+        padding: 25px 0;
+        font-weight: 500;
+        text-align: center;
+        color: #9997a2;
+        p {
+          margin: 0;
+          display: initial;
+          background: #fff;
+          z-index: 2;
+          position: relative;
+          padding: 0 10px;
+        }
+        hr {
+          margin-top: -13px;
+        }
+      }
+    }
+
+    @media (max-width:991px){
+      form{
+        .row {
+          &.mobile{
+            flex-direction: column;
+          }
+          &>div{
+            margin-right: 0px;
+          }
+        }
+      }
+      .lists {
+        padding: 0px; 
+      }
+    }

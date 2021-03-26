@@ -1,0 +1,270 @@
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+.userList_4 {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    margin: 0 -6px;
+    .blur{
+        span {
+            color: transparent!important;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5)!important;
+        }
+    }
+    .box {
+        width: calc(25% - 12px);
+        // flex-grow: 1;
+        background: #fff;
+        border-radius: 5px;
+        position: relative;
+        margin: 6px;
+        // width: 100%;
+        flex: none;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .10);
+        text-align: center;
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
+        -webkit-animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+        animation-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955); 
+        animation-duration: .8s !important;
+        animation-fill-mode: both !important;
+        i {
+            position: absolute;
+            z-index: 2;
+            color: #fff;
+            left: 10px;
+            top: 6px;
+            font-size: 25px;
+            cursor: pointer;
+            text-shadow: 0px 1px 1px rgba(0,0,0,0.2);
+            &.active {
+                color: #ffca1d
+            }
+        }
+        p {
+            color: #232323;
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 0px;
+            text-align: center;
+            margin-bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+        .nickname {
+            font-weight: 500;
+            font-size: 18px;
+            margin: 14px 0 0;
+            display: flex;
+            overflow: hidden;
+            align-items: center;
+            color: #232323;
+            justify-content: center;
+            white-space: nowrap;
+            span {
+                color: inherit;
+                transition: .2s all;
+            }
+        }
+        &>div:nth-child(2){
+            padding:0px 12px 12px 12px;
+        }
+        &:hover {
+            .nickname span {
+                color: #ec6e80;
+            }
+        }
+    }
+    .content {
+        position: relative;
+        .bgContent {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            overflow: hidden;
+            height: 200px;
+            position: relative;
+            border-radius: 5px 5px 0 0;
+        }
+        .bg {
+            // z-index: 1;
+        }
+        .bg, .bg2{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-position: 50%;
+            background-size: cover;
+            transition: all .5s;
+        }
+        &:hover {
+            .bg {
+                transform: scale(1.1);
+            }
+        }
+        .badge {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .status {
+            position: absolute;
+            top:13px;
+            left:13px;
+            img {
+                transform: scale(1.5);
+            }
+        }
+        .bottom {
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            bottom: -13px;
+            font-size: 13px;
+            color: #fff;
+            margin: 0px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            justify-content: space-between;
+            .item {
+                cursor: pointer;
+                background-color: #46A7EE;
+                width: 30px;
+                height:30px;
+                border-radius: 100%;
+                box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.12);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                &:nth-child(1){
+                    margin-right:auto;
+                }
+                &:nth-child(2){
+                    background-color: #F79EF2;
+                    margin-right: 10px;
+                }
+                &:nth-child(3){
+                    background-color: #fff;
+                }
+            }
+        }
+        .photos {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            padding: 3px 8px;
+            font-size: 13px;
+            color: #fff;
+            margin: 0px;
+            background: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            img {
+                margin-right: 8px;
+                margin-top: -2px;
+            }
+            p {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: #fff;
+                opacity: .6;
+                font-weight: 400;
+                margin: 0;
+            }
+
+            .nickname {
+                font-weight: 400;
+                color: #0281ca;
+                font-size: 16px;
+                margin: 8px 0 0;
+                display: flex;
+                overflow: hidden;
+                align-items: center;
+                white-space: nowrap;
+                
+            }
+        }
+    }
+}
+
+@media (max-width:991px){
+    .userList_4 {
+        .box {
+            min-width: calc(50% - 12px)!important;
+            flex: 1;
+            max-width: auto!important;
+        }
+        .content{
+
+            height: 200px;
+        }
+    }
+    .boxs {
+        margin: 0;
+        justify-content: space-between;
+        .box {
+            // max-width: calc(50% - 5px);
+            min-height: auto;
+            display:flex;
+            padding:0;
+            margin:0px;
+            margin-bottom: 10px;
+            flex-grow: inherit;
+            overflow: hidden;
+            &>div:nth-child(2){
+                padding:0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;  
+            }
+            &>div {
+                flex:1
+            }
+            // button {
+            //     margin:5px 0 10px 0
+            // }
+        }
+        .content {
+            width: 100%;
+            flex: none!important;
+            margin-right: 10px;
+            border-radius: 0px;
+        }
+        .likes {
+            position: absolute;
+            left: 10px;
+            height: 35px;
+            opacity: .8;
+            bottom: 10px;
+            margin: 0px!important;
+            width: 129px;
+        }
+        .nickname {
+            text-align: left;
+            margin-top: 0px;
+            word-break: break-all;
+            line-height: 20px;
+            font-size: 18px!important;
+        }
+    }
+}

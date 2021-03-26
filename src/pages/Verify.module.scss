@@ -1,0 +1,106 @@
+.verify {
+    background-color: #f6f9fb;
+    color:#444;
+    .content{
+        max-width: 600px;
+        background-color: #fff;
+        min-height: 100vh;
+        margin: auto;
+        text-align: center;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            margin-bottom: 10px;
+        }
+        p{
+            margin: 0;
+        }
+        .info {
+          margin-top: auto;
+          opacity: .5;
+          display: flex;
+          b {
+              cursor: pointer;
+            color: red;
+            margin-left: 5px;
+            display: block;
+          }
+        }
+    }
+    .progress {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        position: relative;
+        height: 30px;
+        width: 300px;
+        margin:40px auto 0 auto
+    }
+
+    .progressDone {
+        background: linear-gradient(to left, #F2709C, #FF9472);
+        box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+        border-radius: 20px;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        // transition: 1s ease 0.3s;
+        // animation: center-animate 4s ease alternate;
+    }
+    $success__primary: #3DC480;
+    $success__secondary: #B8BABB;
+
+    .successMessage {
+        text-align: center;
+        margin-top: 40px;
+        max-width: 500px;
+    }
+
+    .successMessage__icon {
+        max-width: 75px;
+    }
+
+    .successMessage__title {
+        color: $success__primary;
+        transform: translateY(25px);
+        opacity: 0;
+        transition: all 200ms ease;
+        
+        & {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .successMessage__content {
+        color: $success__secondary;
+        transform: translateY(25px);
+        opacity: 0;
+        transition: all 200ms ease;
+        transition-delay: 50ms;
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .iconCheckmark {
+        circle {
+            fill: $success__primary;
+            transform-origin: 50% 50%;
+            transform: scale(0);
+            transition: transform 200ms cubic-bezier(.22, .96, .38, .98);
+        }
+        path {
+            transition: stroke-dashoffset 350ms ease;
+            transition-delay: 100ms;
+        }
+        
+        & {
+            circle {
+                transform: scale(1);
+            }
+        }
+    }
+}

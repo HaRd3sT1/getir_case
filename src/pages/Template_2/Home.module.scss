@@ -1,0 +1,232 @@
+
+
+.landingPage_2 {
+    background:#000;
+    min-height: 100vh;
+    &.white {
+        background-color: #fff;
+        .banner {
+            .shadow {
+                background: transparent
+            }
+        }
+        // .text {
+        //     h1, p {
+        //         color:#6a6a6a;
+        //     }
+        // }
+        .usersGeneral {
+            .users {
+                color:#6a6a6a;
+            }
+            .text {
+                color:#6a6a6a;
+            }
+        }
+        .title {
+            color: #6a6a6a
+        }
+        .iconList {
+            color: #6a6a6a;
+            div {
+                p {
+                    color: #888;
+                    b {
+                        color: #599d00;
+                    }
+                }
+            }
+        }
+        .footerLink {
+            color: #6a6a6a;
+        }
+        .text_2 {
+            color: #6a6a6a;
+        }
+    }
+    .btnStyle1 {
+        padding:15px;
+        margin-top:10px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .banner {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        height: 600px;
+        .overlay {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background:#000;
+            opacity: .2;
+        }
+        .shadow {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: transparent;
+            background: -moz-linear-gradient(top,transparent 50%,#000 100%);
+            background: -webkit-linear-gradient(top,transparent 50%,#000 100%);
+            background: linear-gradient(to bottom,transparent 50%,#000 100%);
+        }
+    }
+    
+    .text {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 1;
+        h1{
+            color: #fff;
+            text-shadow: 0 0 10px #000;
+            font-size: 38px;
+            margin-bottom: 10px;
+            margin-top: 30px;
+        }
+        button {
+            margin-top: 40px!important;
+            font-weight: bold;
+        }
+        p {
+            font-size: 22px;
+            margin: 0px;
+            color: #fff;
+            opacity: .7;
+        }
+    }
+    .logo {
+        margin-top: 40px;
+    }
+    .buttons {
+        position: fixed;
+        padding: 18px;
+        right: 0;
+        top: 0;
+        z-index: 3;
+        button {
+            margin-top: 0px!important;
+            font-weight: bold;
+        }
+    }
+    .usersGeneral {
+        .users {
+            display: flex;
+            margin-right: 140px;
+            .user {
+                width:260px;
+                height:260px;
+                border-radius: 100%;
+                margin-right: -80px;
+                border: 3px solid #fff;
+            }
+        }
+        .text {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #fff;
+            font-weight: 500;
+        } 
+    }
+    .title {
+        font-size: 30px;
+        color: #fff
+    }
+    .iconList {
+        display:flex;
+        color: #fff;
+        justify-content: space-between;
+        margin-top: 60px;
+        margin-bottom: 50px;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 220px;
+            p {
+                font-size: 22px;
+                margin: 0px;
+                color: rgba(255,255,255,0.7);
+                b {
+                    color: #fff;
+                }
+            }
+            i {
+                font-size: 50px;
+            }
+        }
+    }
+    .footerLink {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        margin-top: 80px;
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            li {
+                margin-right: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+    .text_2 {
+        font-size: 13px;
+        color: #fff;
+        opacity: .7;
+    }
+}
+
+@media (max-width:991px){
+    .landingPage_2 {
+        .text {
+            text-align: center;
+            padding:20px;
+            h1{
+                font-size: 28px;
+            }
+            p {
+                font-size:18px
+            }
+        }
+        .usersGeneral {
+            .users {
+                margin-right: 0px;
+                .user {
+                    width:170px;
+                    height:170px;
+                    &:nth-child(2){
+                        margin-right: 0px;
+                    }
+                }
+            }
+            .text {
+                padding:0px
+            }
+        }
+        .title {
+            font-size: 24px;
+            text-align: center;
+        }
+        .iconList {
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            div {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

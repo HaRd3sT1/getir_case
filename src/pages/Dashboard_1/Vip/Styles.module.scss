@@ -1,0 +1,198 @@
+.containerVip {
+    width: 685px;
+    margin-top: 30px;
+  .box {
+    flex:1;
+    background:#fff;
+    box-shadow: 0 0 12px 0 rgba(63, 66, 87, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .box_list {
+    display: flex;
+    align-items: center;
+    margin:30px 0 30px 0
+  }
+  .box:nth-child(2){
+    margin:0 -5px;
+    z-index: 2;
+    height: 520px;
+  }
+  .box:nth-child(2) .title {
+    height: 140px;
+  }
+  .box ul {
+    padding:18px
+  }
+  .box ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #65676b
+  }
+  .box ul li span {
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    background-color: #3bb54b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    flex:none;
+    font-size: 10px;
+    color: #fff
+  }
+  .box ul li img {
+    height: 10px;
+    width: 10px;
+  }
+  .box .button {
+    padding:12px;
+    width:calc(100% - 40px);
+    text-align: center;
+    border-radius: 10px;
+    background: rgb(203,146,127);
+    color: #fff;
+    margin:16px auto 20px auto;
+    font-weight: bold;
+    font-size: 16px;
+    transition:.3s all;
+    background: linear-gradient(208deg, #c58069 0%, #e2af8d 100%);
+  }
+  .box:hover .button {
+    margin-bottom:0;
+    width:100%;
+    border-radius: 0 0 10px 10px;
+  }
+  .box:nth-child(2) .button{
+    background: rgb(232,195,146);
+    background: linear-gradient(208deg, #f8c104 0%, #f7b201 100%)
+  }
+  .box:nth-child(2):hover .button {
+  }
+  .box:nth-child(3) .button{
+    background: rgb(162,172,184);
+    background: linear-gradient(208deg, #a2acb8 0%, #c4cbd6 100%);
+  }
+  .box:nth-child(3):hover .button {
+  }
+  .coin {
+    text-align:center;
+    color: #f8c104;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .coin p {
+    margin:0
+  }
+  small {
+    width:100%;
+    // text-align:center;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+  }
+  .title {
+    height: 120px;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    background: rgb(203,146,127);
+    color: #fff;
+    background: linear-gradient(208deg, #c58069 0%, #e2af8d 100%);
+  }
+  .title h4 {
+    font-size: 40px;
+    margin:0;
+    color: #fff
+  }
+  .title p {
+    font-size:20px;
+    font-weight: bold;
+    margin: 0px;
+  }
+  .box:nth-child(2) .title{
+    background: rgb(232,195,146);
+    background: linear-gradient(208deg, #f8c104 0%, #f7b201 100%)
+  }
+  .box:nth-child(3) .title{
+    background: rgb(162,172,184);
+    background: linear-gradient(208deg, #a2acb8 0%, #c4cbd6 100%);
+  }
+  .vipTitle {
+    color: #65676b;
+    text-align: center;
+  }
+  h2 {
+    font-size: 22px;
+    color: #65676b;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+  }
+  .faq {
+      margin-bottom: 10px;
+  }
+  .faq p{
+      background-color: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      color: #494c61;
+      padding: 12px 14px;
+      font-weight: 400;
+      font-size: 16px;
+      cursor: pointer;
+      margin-bottom: 0px;
+      margin-top: 0;
+  }
+  .faq small{
+      font-size:14px;
+      display:block;
+      max-height: 0px;
+      overflow: hidden;
+      margin-bottom:0;
+      transition: .3s all;
+      background: #fff;
+      margin-top: 1px;
+      line-height: 22px;
+  }
+  .faq.active small {
+      max-height: 400px;
+      padding: 14px;
+  }
+  .icons{
+      display:flex;
+      margin-top:15px;
+      justify-content: center;
+      li{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          width: 100px;
+          height: 50px;
+          border: 1px solid #eee;
+          padding: 8px;
+      }
+  }
+}
+@media (max-width:991px){
+  .containerVip {
+    width: 100%;
+    small {
+      text-align: center;
+    }
+    .box_list {
+      flex-direction: column;
+    }
+    .box {
+      margin:30px
+    }
+  }
+}

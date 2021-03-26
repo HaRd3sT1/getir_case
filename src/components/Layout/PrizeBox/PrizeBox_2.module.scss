@@ -1,0 +1,82 @@
+.general {
+    width:100%;
+    margin-bottom: 20px;
+    .title {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        position: relative 
+    }
+    .prizeBoxs {
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        .prizeBox {
+            width:100%;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:relative;
+            overflow:hidden;
+            height: 40px;    
+            color: #004085;
+            background-color: #cce5ff;
+            border-color: #b8daff;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            padding:0 10px;
+            margin-bottom: 10px;
+            &:nth-child(1){
+                background: #4ca7e2;
+                color: #fff;
+            }
+            &:nth-child(2){
+                background: #f3837b;
+                color: #fff;
+            }
+            &:nth-child(3){
+                background: #ffc400;
+                color: #fff;
+            }
+            &:nth-child(4){
+                background: #2bd874;
+                color: #fff;
+            }
+            p {
+            margin: 0!important;
+            flex: 1;
+            padding:0;
+            font-weight: 500;
+            line-height:16px;
+            font-size: 14px!important;
+            justify-content:flex-start!important
+            }
+        }
+        b {
+        font-size: 14px;
+        font-weight: 500;
+        }
+        .prizeOverlay {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: #ada4ff;
+        color: #fff;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        transition: 1s all;
+        overflow: hidden;
+        width: 0px;
+        border-radius: 5px;
+        height: 44px;
+        }
+    }
+}
+@media (max-width:991px){
+    .general {
+        width:100%
+    }
+}

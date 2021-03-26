@@ -1,0 +1,26 @@
+export default {
+  ROOT: '/',
+  DASHBOARD: '/dashboard',
+  VERIFY: '/verify',
+  LOGIN: '/login',
+  USERS: '/users',
+  MESSAGES: '/messages',
+  MODIFY_USER: '/users/:id',
+  PROFILE: '/profile',
+  DISCOVERY: '/discovery',
+  PROFILE_EDIT_1: '/profile_edit_1',
+  PROFILE_EDIT_2: '/profile_edit_2',
+  PROFILE_EDIT_3: '/profile_edit_3',
+  SETTINGS: '/settings',
+  MATCH: '/match',
+  FAVS: '/favs',
+  VIEWS: '/views',
+  FRIENDS: '/friends',
+  PREMIUM: '/premium',
+  VORKASSE: '/vorkasse',
+  STEP_2: '/step2',
+  STEP_3: '/step3',
+  SEARCH: '/search',
+  VIP:"/vip"
+};
+  

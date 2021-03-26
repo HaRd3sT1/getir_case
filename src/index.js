@@ -1,21 +1,41 @@
+// import "./test"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import store from './app/store';
 import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
+import ReduxToastr from 'react-redux-toastr';
+
+import LanguageWrapper from './components/Language';
+import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
+import { configureStore } from './state/store';
+import './index.scss';
+import Router from './Router/Template';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+import './assets/css/main.css';
+
+const { store, persistor } = configureStore({});
+
+const app = (
+  <Provider store={store}>
+    <LanguageWrapper>
+      <PersistGate persistor={persistor}>
+        <ReduxToastr
+          newestOnTop={false}
+          preventDuplicates
+          position="bottom-right"
+          getState={state => state.toastr}
+          transitionIn="fadeIn"
+          transitionOut="fadeOut"
+          progressBar
+          closeOnToastrClick
+        />
+        <Router />
+      </PersistGate>
+    </LanguageWrapper>
+  </Provider>
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+ReactDOM.render(app, document.getElementById('root'));
+
 serviceWorker.unregister();

@@ -1,0 +1,248 @@
+
+.headerBar {
+    box-shadow: 0 0 12px 0 rgba(63,66,87,.1);
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    height:60px;
+    align-items: center;
+    .newMessage {
+        position: absolute;
+        right: -12px;
+        top: -7px;
+        width: 18px;
+        height: 18px;
+        background: #ada4ff;
+        color: #fff;
+        text-align: center;
+        border-radius: 100%;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 500;
+    }
+    .headerLogo {
+        padding-left: 16px;
+        width: 320px;
+        display: flex;
+        align-items: center;
+    }
+    .headerProfile {
+        padding-right: 16px;
+        width: 320px;
+        justify-content: flex-end;
+        display: flex;
+
+        .profile {
+            display: flex;
+            border-radius: 50px;
+            height: 38px;
+            margin-right: 10px;
+            background: #ffff;
+            align-items: center;
+            transition: .2s all;
+            &:hover {
+                background-color: #f0f2f5;
+            }
+            .profileAvatar {
+                height: 38px;
+                width: 38px;
+                border-radius: 100%;
+                display:flex;
+                align-items: center;
+                position: relative;
+                flex:none;
+                .img {
+                    height:100%;
+                    width:100%;
+                    overflow: hidden;
+                    border-radius: 100%;
+                    img {
+
+                        min-height: 100%;
+                        width:100%
+                    }
+                }
+            }
+            .profileP {
+                margin: 0 15px;
+                font-weight: bold;
+                max-width: 100px;
+                overflow: hidden;
+            }
+        }
+        .logout {
+            display:flex;
+            border-radius: 50px;
+            height: 38px;
+            width: 38px;
+            background: #e4e6eb;
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            transition: .2s all;
+            margin-left: 8px;
+            cursor: pointer;
+            &:hover{
+                background-color: #e74c3c;
+                color: #fff;
+            }
+            i {
+                font-size: 20px;
+            }
+        }
+       .coinH {
+            display:flex;
+            border-radius: 50px;
+            height: 38px;
+            background: #e4e6eb;
+            overflow: hidden;
+            align-items: center;
+            transition: .2s all;
+            &:hover {
+                background: #f1c40f;
+                color:#fff
+            }
+            .coinB{
+                margin: 0 15px;
+                font-weight: bold
+            }
+        }
+    }
+    .logo {
+        height:42px;
+    }
+    .search {
+        margin-left: 15px;
+    }
+    .menu {
+        max-width: 680px;
+        margin-left: 15px;
+        margin-right: 15px;
+        flex: auto;
+        li{
+            flex:1;
+            margin:0 2px;
+            display:flex;
+            justify-content:center;
+            .a {
+                width: 100%;
+                height: 48px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 4px;
+                transition: .2s all;
+                svg:nth-child(2), &.active svg:nth-child(1), svg:nth-child(3) {
+                    display: none;
+                }
+                &.active {
+                    background-color: #fff!important;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        bottom:-6px;
+                        left:0;
+                        width: 100%;
+                        height: 3px;
+                        background: #ada4ff;
+                        /* background: linear-gradient(29deg, rgba(172,164,255,1) 0%, rgba(227,154,255,1) 100%); */
+                        border-radius: 4px;
+                    }
+                    svg:nth-child(2) {
+                        display: block;
+                    }
+                }
+                span {
+                    position: absolute;
+                    bottom: -44px;
+                    margin: auto;
+                    height: 34px;
+                    color: #fff;
+                    background-color: #333;
+                    line-height: 34px;
+                    padding: 0 12px;
+                    border-radius: 8px;
+                    opacity: 0.9;
+                    display: none;
+                }
+                &:hover {
+                    background-color: #eee; 
+                    span {
+                        display: block;
+                    }
+                }
+            }
+            &.hover2 a:hover svg:nth-child(1) {
+                display: none;
+            }
+            &.hover2 a:hover svg:nth-child(3) {
+                display: block;
+            }
+            &.hover2 a.active svg:nth-child(3) {
+                display: none!important;
+            }
+        }
+    }
+
+}
+@media (max-width:991px){
+    .headerBar {    
+        z-index: 998;
+        left: auto;
+        width: auto;
+        right: 0;
+        border-radius: 60px 0 0 60px;
+        .headerProfile {
+            width:auto!important;
+            margin-left: 10px;
+            padding-right: 10px;
+        }
+        .headerLogo {
+            // flex-wrap: nowrap;
+            // width: none!important;
+            // flex:1;
+            box-shadow: 0 0 12px 0 rgba(63, 66, 87, 0.1);
+            position: fixed;
+            left: 0;
+            top: 0;
+            background: #fff;
+            width: 60px;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60px;
+            border-radius: 0 60px 60px 0;
+            .search {
+                margin-left: 5px;
+                display: none;
+            }
+            .logo {
+                width: 42px;
+                overflow: hidden;
+                flex: none;
+            }
+        }
+        .menu {
+                padding-bottom: 6px;
+                position: fixed;
+                bottom:0;
+                z-index: 22;
+                left: 0;
+                right: 0;
+                background: #fff;
+                bottom: 0;
+                margin-left: 0;
+                width: 100%;
+                box-shadow: 0 0 5px rgba(0,0,0,.2);
+        }
+        .profile {
+            max-width: 133px;
+        }
+    }
+}

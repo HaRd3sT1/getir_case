@@ -1,0 +1,136 @@
+
+
+.landingPage_3 {
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    .loginMobile {
+        display: none;
+    }
+    .center {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+    }
+    .logo {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .login {
+        position: absolute;
+        top:30px;
+        right: 0px;
+        height:40px;
+        padding:0 30px;
+        font-size: 16px;
+    }
+    .text {
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 18px;
+        max-width: 700px;
+        color: #676a6a;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        line-height: 24px;
+    }
+    .btnBg {
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 132px;
+        height: 47px;
+        color: #fff;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 300;
+        float: left;
+        margin: -10px -5px 0 0;
+    }
+    .register {
+        height: 64px;
+        width: 320px;
+        font-weight: 600;
+        letter-spacing: 2px;
+        font-size: 16px;
+        margin-top: 30px;
+    }
+    .footerLink {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        margin-top: auto;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            span {
+                margin:0 10px;
+                display: block;
+                opacity: .7;
+            }
+            li {
+                cursor: pointer;
+            }
+        }
+    }
+    .footerBottom {
+        text-align: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
+        align-items: center;
+        letter-spacing: 2px;
+        .btnBg {
+            font-size: 12px;
+            float: none;
+            margin:0 5px;
+            width: 90px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media (max-width:991px){
+    .landingPage_3 {
+        .login {
+            display: none;
+        }
+        .text {
+            font-size: 16px;
+            width: 320px;
+            .btnBg {
+                width: 105px;
+                font-size: 16px;
+                height: 37px;
+                margin-top: -13px;
+                bottom: -7px;
+                position: relative;
+                left: 24px;
+            }
+        }
+        .loginMobile {
+            display: block;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 16px;
+            text-transform: uppercase;
+            width: 320px;
+            height: 64px;
+            margin-top: 20px;
+        }
+    }
+}
