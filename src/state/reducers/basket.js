@@ -5,7 +5,7 @@ import {
 } from '../actions/dashboard';
 const initialState = {};
 
-const dashobard = createReducer(
+const basket = createReducer(
   {
     [ONCHANGE]: (state, payload) => {
         return ({ 
@@ -17,4 +17,4 @@ const dashobard = createReducer(
   initialState
 );
 
-export default dashobard
+export default basket

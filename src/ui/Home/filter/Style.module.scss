@@ -1,0 +1,113 @@
+.filterBox {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 24px rgba(93, 62, 188, 0.04);
+    border-radius: 2px;
+    padding:24px 24px 24px 18px;
+    width: 296px;
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    color: #697488;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+ul {
+    padding-left: 6px;
+    li {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        small {
+            color: #A8A8A8;
+            font-size: 14px;
+            margin-left: 5px;
+        }
+    }
+}
+.searchInput {
+    height: 48px;
+    border: 2px solid #E0E0E0;
+    border-radius: 2px;
+    padding:0 24px;
+    margin-bottom: 16px;
+    margin-left: 6px;
+}
+.shorting, .brands {
+    margin-bottom: 24px;
+}
+
+.checkboxCustom, .radioCustom {
+    opacity: 0;
+    position: absolute;   
+}
+
+.checkboxCustom, .checkboxCustomLabel, .radioCustom, .radioCustomLabel {
+    
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #525252;
+    font-size: 14px;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.checkboxCustomLabel, .radioCustomLabel {
+    position: relative;
+    outline: none!important;
+}
+
+.radioCustom + .radioCustomLabel .icon {
+    background-color: #fff;
+    border: 2px solid #DFDEE2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    border-radius: 50%;
+    transition: .2s all;
+    img {
+        opacity: 0;
+    }
+}
+
+.checkboxCustom + .checkboxCustomLabel .icon {
+    background-color: #fff;
+    box-shadow: 0px 1px 7px rgba(93, 56, 192, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    margin-right: 12px;
+    border-radius: 2px;
+    transition: .2s all;
+    img {
+        opacity: 0;
+    }
+}
+
+.radioCustom:checked + .radioCustomLabel .icon {
+    border: 2px solid var(--blue);
+    img {
+        opacity: 1;
+    }
+}
+
+.checkboxCustom:checked + .checkboxCustomLabel .icon {
+    border: 2px solid var(--blue);
+    background-color: var(--blue);
+    img {
+        opacity: 1;
+    }
+}

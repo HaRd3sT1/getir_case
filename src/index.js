@@ -1,41 +1,19 @@
 // import "./test"
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { PersistGate } from 'redux-persist/integration/react';
-import ReduxToastr from 'react-redux-toastr';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+// import firebase from "./firebase"
 
-import LanguageWrapper from './components/Language';
-import 'react-redux-toastr/lib/css/react-redux-toastr.min.css';
-import { configureStore } from './state/store';
-import './index.scss';
-import Router from './Router/Template';
-import * as serviceWorker from './serviceWorker';
-
-import './assets/css/main.css';
-
-const { store, persistor } = configureStore({});
-
-const app = (
-  <Provider store={store}>
-    <LanguageWrapper>
-      <PersistGate persistor={persistor}>
-        <ReduxToastr
-          newestOnTop={false}
-          preventDuplicates
-          position="bottom-right"
-          getState={state => state.toastr}
-          transitionIn="fadeIn"
-          transitionOut="fadeOut"
-          progressBar
-          closeOnToastrClick
-        />
-        <Router />
-      </PersistGate>
-    </LanguageWrapper>
-  </Provider>
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
-ReactDOM.render(app, document.getElementById('root'));
-
-serviceWorker.unregister();
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
